@@ -35,6 +35,9 @@ jobs:
         run: | 
           python -m pip install pip==${{ matrix.pip_version }}
           pip install papermill ipykernel papermill-nb-runner
+
+      - name: Install dependencies
+        run: pip list
       
       - name: Make dir
         run: mkdir /tmp/ipynb
